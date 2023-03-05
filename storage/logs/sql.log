@@ -1,0 +1,984 @@
+
+2023/03/05 14:19:21 /Users/stack/Project/go_lang/rat/bootstrap/db.go:47
+[error] failed to initialize database, got error dial tcp 127.0.0.1:8306: connect: connection refused
+
+2023/03/05 14:20:44 /Users/stack/Project/go_lang/rat/bootstrap/db.go:47
+[error] failed to initialize database, got error dial tcp 127.0.0.1:8306: connect: connection refused
+
+2023/03/05 14:22:02 /Users/stack/Project/go_lang/rat/bootstrap/db.go:47
+[error] failed to initialize database, got error dial tcp 127.0.0.1:8306: connect: connection refused
+
+2023/03/05 14:22:20 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.852ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 14:22:20 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[5.318ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 14:22:20 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[3.706ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'rat' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/03/05 14:22:20 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[36.658ms] [rows:0] CREATE TABLE `users` (`id` bigint unsigned AUTO_INCREMENT,`name` varchar(191) NOT NULL COMMENT '用户名称',`mobile` varchar(191) NOT NULL COMMENT '用户手机号',`password` varchar(191) NOT NULL DEFAULT '' COMMENT '用户密码',`created_at` datetime NULL,`updated_at` datetime NULL,`deleted_at` datetime NULL,PRIMARY KEY (`id`),INDEX `idx_users_mobile` (`mobile`),INDEX `idx_users_deleted_at` (`deleted_at`))
+
+2023/03/05 14:22:34 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.111ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 14:22:34 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.812ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 14:22:34 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[1.524ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'rat' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/03/05 14:22:34 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.150ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 14:22:34 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.670ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 14:22:34 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[1.337ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/03/05 14:22:34 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[4.814ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'rat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/03/05 14:22:34 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.181ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 14:22:34 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.761ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 14:22:34 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.236ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/03/05 14:22:34 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.066ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 14:22:34 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.495ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 14:22:34 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.225ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/03/05 14:25:02 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.124ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 14:25:02 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.860ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 14:25:02 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.340ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'rat' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/03/05 14:25:02 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.089ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 14:25:02 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.582ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 14:25:02 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.183ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/03/05 14:25:02 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[3.429ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'rat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/03/05 14:25:02 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.160ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 14:25:02 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.857ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 14:25:02 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.285ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/03/05 14:25:02 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.069ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 14:25:02 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.550ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 14:25:02 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.254ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/03/05 14:31:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.135ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 14:31:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[1.089ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 14:31:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.498ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'rat' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/03/05 14:31:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.157ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 14:31:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.951ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 14:31:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.344ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/03/05 14:31:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[4.059ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'rat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/03/05 14:31:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.123ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 14:31:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.787ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 14:31:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.331ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/03/05 14:31:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.109ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 14:31:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.748ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 14:31:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.341ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/03/05 14:37:52 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.122ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 14:37:52 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.839ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 14:37:52 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.250ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'rat' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/03/05 14:37:52 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.068ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 14:37:52 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.552ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 14:37:52 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.246ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/03/05 14:37:52 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[3.752ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'rat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/03/05 14:37:52 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.124ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 14:37:52 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.755ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 14:37:52 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.337ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/03/05 14:37:52 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.103ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 14:37:52 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.673ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 14:37:52 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.299ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/03/05 14:40:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.102ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 14:40:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.776ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 14:40:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.293ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'rat' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/03/05 14:40:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.059ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 14:40:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.509ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 14:40:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.162ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/03/05 14:40:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[2.650ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'rat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/03/05 14:40:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.113ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 14:40:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.598ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 14:40:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.291ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/03/05 14:40:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.083ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 14:40:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.601ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 14:40:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.356ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/03/05 14:44:59 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.086ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 14:44:59 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.664ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 14:44:59 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.210ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'rat' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/03/05 14:44:59 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.050ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 14:44:59 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.416ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 14:44:59 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.124ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/03/05 14:44:59 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[1.846ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'rat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/03/05 14:44:59 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.091ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 14:44:59 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.480ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 14:44:59 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.248ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/03/05 14:44:59 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.066ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 14:44:59 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.452ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 14:44:59 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.209ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/03/05 14:45:54 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.104ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 14:45:54 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.811ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 14:45:54 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[1.686ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'rat' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/03/05 14:45:54 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.129ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 14:45:54 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.835ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 14:45:54 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.214ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/03/05 14:45:54 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[4.252ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'rat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/03/05 14:45:54 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.146ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 14:45:54 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[1.725ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 14:45:54 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.423ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/03/05 14:45:54 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.145ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 14:45:54 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.544ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 14:45:54 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.218ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/03/05 14:46:22 /Users/stack/Project/go_lang/rat/app/services/user.go:18 record not found
+[3.757ms] [rows:0] SELECT `id` FROM `users` WHERE mobile = '19938064067' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/03/05 14:46:22 /Users/stack/Project/go_lang/rat/app/services/user.go:24
+[2.849ms] [rows:1] INSERT INTO `users` (`name`,`mobile`,`password`,`created_at`,`updated_at`,`deleted_at`) VALUES ('jack','19938064067','$2a$04$9Pnjhm.kTNktMTtRz6Xbd.cU3FYYwji5ooqsuICqoQg7Qk5yMOutS','2023-03-05 14:46:22.747','2023-03-05 14:46:22.747',NULL) RETURNING `id`
+
+2023/03/05 14:55:30 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.179ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 14:55:30 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[1.297ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 14:55:30 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.275ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'rat' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/03/05 14:55:30 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.070ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 14:55:30 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.483ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 14:55:30 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.253ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/03/05 14:55:30 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[3.720ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'rat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/03/05 14:55:30 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.170ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 14:55:30 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.983ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 14:55:30 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.329ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/03/05 14:55:30 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.100ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 14:55:30 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.643ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 14:55:30 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.283ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/03/05 14:55:33 /Users/stack/Project/go_lang/rat/app/services/user.go:30
+[0.714ms] [rows:1] SELECT * FROM `users` WHERE mobile = '19938064067' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/03/05 15:01:34 /Users/stack/Project/go_lang/rat/app/services/user.go:30
+[0.668ms] [rows:1] SELECT * FROM `users` WHERE mobile = '19938064067' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/03/05 15:01:49 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.122ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:01:49 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.798ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:01:49 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.302ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'rat' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/03/05 15:01:49 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.071ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:01:49 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.552ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:01:49 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.175ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/03/05 15:01:49 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[4.290ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'rat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/03/05 15:01:49 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.130ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:01:49 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.606ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:01:49 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.251ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/03/05 15:01:49 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.077ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:01:49 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.457ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:01:49 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.332ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/03/05 15:01:51 /Users/stack/Project/go_lang/rat/app/services/user.go:31
+[0.951ms] [rows:1] SELECT * FROM `users` WHERE mobile = '19938064067' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/03/05 15:01:58 /Users/stack/Project/go_lang/rat/app/services/user.go:41
+[1.414ms] [rows:1] SELECT * FROM `users` WHERE `users`.`id` = 1 AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/03/05 15:02:00 /Users/stack/Project/go_lang/rat/app/services/user.go:41
+[0.511ms] [rows:1] SELECT * FROM `users` WHERE `users`.`id` = 1 AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/03/05 15:02:01 /Users/stack/Project/go_lang/rat/app/services/user.go:41
+[0.832ms] [rows:1] SELECT * FROM `users` WHERE `users`.`id` = 1 AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/03/05 15:02:01 /Users/stack/Project/go_lang/rat/app/services/user.go:41
+[0.506ms] [rows:1] SELECT * FROM `users` WHERE `users`.`id` = 1 AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/03/05 15:02:01 /Users/stack/Project/go_lang/rat/app/services/user.go:41
+[0.779ms] [rows:1] SELECT * FROM `users` WHERE `users`.`id` = 1 AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/03/05 15:20:10 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.081ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:20:10 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[1.761ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:20:10 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.266ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'rat' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/03/05 15:20:10 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.055ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:20:10 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.439ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:20:10 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.151ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/03/05 15:20:10 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[3.407ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'rat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/03/05 15:20:10 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.154ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:20:10 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[1.109ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:20:10 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.441ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/03/05 15:20:10 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.139ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:20:10 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[1.268ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:20:10 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.795ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/03/05 15:21:30 /Users/stack/Project/go_lang/rat/app/services/user.go:31
+[1.021ms] [rows:1] SELECT * FROM `users` WHERE mobile = '19938064067' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/03/05 15:22:23 /Users/stack/Project/go_lang/rat/app/services/user.go:31
+[0.550ms] [rows:1] SELECT * FROM `users` WHERE mobile = '19938064067' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/03/05 15:23:23 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.096ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:23:23 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.739ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:23:23 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.662ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'rat' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/03/05 15:23:23 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.077ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:23:23 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.617ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:23:23 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.189ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/03/05 15:23:23 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[2.187ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'rat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/03/05 15:23:23 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.086ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:23:23 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.493ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:23:23 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.267ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/03/05 15:23:23 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.085ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:23:23 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.455ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:23:23 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.223ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/03/05 15:23:37 /Users/stack/Project/go_lang/rat/app/services/user.go:31
+[0.629ms] [rows:1] SELECT * FROM `users` WHERE mobile = '19938064067' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/03/05 15:25:16 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.113ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:25:16 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[1.304ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:25:16 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.478ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'rat' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/03/05 15:25:16 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.099ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:25:16 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.669ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:25:16 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.182ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/03/05 15:25:16 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[2.222ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'rat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/03/05 15:25:16 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.154ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:25:16 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.992ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:25:16 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.462ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/03/05 15:25:16 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.153ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:25:16 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.877ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:25:16 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.392ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/03/05 15:25:23 /Users/stack/Project/go_lang/rat/app/services/user.go:31
+[0.766ms] [rows:1] SELECT * FROM `users` WHERE mobile = '19938064067' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/03/05 15:28:58 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.102ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:28:58 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.877ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:28:58 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.770ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'rat' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/03/05 15:28:58 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.088ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:28:58 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.599ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:28:58 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.198ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/03/05 15:28:58 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[2.541ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'rat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/03/05 15:28:58 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.103ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:28:58 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.761ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:28:58 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.476ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/03/05 15:28:58 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.111ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:28:58 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.955ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:28:58 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.367ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/03/05 15:29:34 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.205ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:29:34 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[2.988ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:29:34 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.670ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'rat' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/03/05 15:29:34 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.165ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:29:34 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[1.122ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:29:34 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.348ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/03/05 15:29:34 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[5.069ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'rat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/03/05 15:29:34 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.174ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:29:34 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[1.032ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:29:34 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.462ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/03/05 15:29:34 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.138ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:29:34 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.918ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:29:34 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.504ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/03/05 15:30:31 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.094ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:30:31 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[1.540ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:30:31 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.336ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'rat' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/03/05 15:30:31 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.086ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:30:31 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.518ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:30:31 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.173ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/03/05 15:30:31 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[1.923ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'rat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/03/05 15:30:31 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.081ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:30:31 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.543ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:30:31 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.232ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/03/05 15:30:31 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.069ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:30:31 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.465ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:30:31 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.240ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/03/05 15:30:35 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.116ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:30:35 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.753ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:30:35 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.289ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'rat' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/03/05 15:30:35 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.084ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:30:35 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.523ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:30:35 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.166ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/03/05 15:30:35 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[1.988ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'rat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/03/05 15:30:35 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.085ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:30:35 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.464ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:30:35 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.223ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/03/05 15:30:35 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.077ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:30:35 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.439ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:30:35 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.216ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/03/05 15:30:43 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.098ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:30:43 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.775ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:30:43 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.319ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'rat' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/03/05 15:30:43 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.097ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:30:43 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.505ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:30:43 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.178ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/03/05 15:30:43 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[2.447ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'rat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/03/05 15:30:43 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.143ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:30:43 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.608ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:30:43 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.268ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/03/05 15:30:43 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.069ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:30:43 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.868ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:30:43 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.226ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/03/05 15:31:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.113ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:31:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.749ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:31:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.307ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'rat' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/03/05 15:31:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.078ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:31:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.526ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:31:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.155ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/03/05 15:31:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[1.814ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'rat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/03/05 15:31:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.088ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:31:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.474ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:31:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.238ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/03/05 15:31:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.064ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:31:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.481ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:31:47 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.223ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/03/05 15:33:23 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.169ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:33:23 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[1.236ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:33:23 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.585ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'rat' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/03/05 15:33:23 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.143ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:33:23 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.790ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:33:23 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.156ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/03/05 15:33:23 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[1.918ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'rat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/03/05 15:33:23 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.083ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:33:23 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.727ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:33:23 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.353ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/03/05 15:33:23 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.091ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:33:23 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.715ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:33:23 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.377ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/03/05 15:33:36 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.127ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:33:36 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[1.240ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:33:36 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.527ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'rat' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/03/05 15:33:36 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.160ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:33:36 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.979ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:33:36 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.261ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/03/05 15:33:36 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[3.556ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'rat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/03/05 15:33:36 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.116ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:33:36 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.773ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:33:36 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.294ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/03/05 15:33:36 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.087ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:33:36 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.518ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:33:36 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.245ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/03/05 15:33:46 /Users/stack/Project/go_lang/rat/app/services/user.go:41
+[0.517ms] [rows:1] SELECT * FROM `users` WHERE `users`.`id` = 1 AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/03/05 15:33:53 /Users/stack/Project/go_lang/rat/app/services/user.go:31
+[0.904ms] [rows:1] SELECT * FROM `users` WHERE mobile = '19938064067' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/03/05 15:34:00 /Users/stack/Project/go_lang/rat/app/services/user.go:41
+[0.481ms] [rows:1] SELECT * FROM `users` WHERE `users`.`id` = 1 AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/03/05 15:34:06 /Users/stack/Project/go_lang/rat/app/services/user.go:41
+[0.458ms] [rows:1] SELECT * FROM `users` WHERE `users`.`id` = 1 AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/03/05 15:34:09 /Users/stack/Project/go_lang/rat/app/services/user.go:41
+[0.577ms] [rows:1] SELECT * FROM `users` WHERE `users`.`id` = 1 AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/03/05 15:34:09 /Users/stack/Project/go_lang/rat/app/services/user.go:41
+[0.846ms] [rows:1] SELECT * FROM `users` WHERE `users`.`id` = 1 AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/03/05 15:34:09 /Users/stack/Project/go_lang/rat/app/services/user.go:41
+[0.509ms] [rows:1] SELECT * FROM `users` WHERE `users`.`id` = 1 AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/03/05 15:40:57 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.125ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:40:57 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[1.275ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:40:57 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.388ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'rat' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/03/05 15:40:57 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.084ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:40:57 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.838ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:40:57 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.185ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/03/05 15:40:57 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[1.946ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'rat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/03/05 15:40:57 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.095ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:40:57 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.515ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:40:57 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.228ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/03/05 15:40:57 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.120ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:40:57 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.736ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:40:57 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.313ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/03/05 15:41:07 /Users/stack/Project/go_lang/rat/app/services/user.go:31
+[0.903ms] [rows:1] SELECT * FROM `users` WHERE mobile = '19938064067' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/03/05 15:41:37 /Users/stack/Project/go_lang/rat/app/services/user.go:41
+[0.496ms] [rows:1] SELECT * FROM `users` WHERE `users`.`id` = 1 AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/03/05 15:41:37 /Users/stack/Project/go_lang/rat/app/services/user.go:41
+[0.239ms] [rows:1] SELECT * FROM `users` WHERE `users`.`id` = 1 AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/03/05 15:41:43 /Users/stack/Project/go_lang/rat/app/services/user.go:41
+[0.503ms] [rows:1] SELECT * FROM `users` WHERE `users`.`id` = 1 AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/03/05 15:58:41 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.182ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:58:41 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[2.649ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:58:41 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.615ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'rat' AND table_name = 'users' AND table_type = 'BASE TABLE'
+
+2023/03/05 15:58:41 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.142ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:58:41 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.778ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:58:41 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.218ms] [rows:-] SELECT * FROM `users` LIMIT 1
+
+2023/03/05 15:58:41 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[2.536ms] [rows:-] SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale FROM information_schema.columns WHERE table_schema = 'rat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+
+2023/03/05 15:58:41 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.121ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:58:41 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.751ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:58:41 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.316ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_mobile'
+
+2023/03/05 15:58:41 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.107ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:58:41 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.814ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:58:41 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.303ms] [rows:-] SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'rat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+
+2023/03/05 15:58:41 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.107ms] [rows:-] SELECT DATABASE()
+
+2023/03/05 15:58:41 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.669ms] [rows:1] SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'rat%' ORDER BY SCHEMA_NAME='rat' DESC,SCHEMA_NAME limit 1
+
+2023/03/05 15:58:41 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[0.575ms] [rows:-] SELECT count(*) FROM information_schema.tables WHERE table_schema = 'rat' AND table_name = 'media' AND table_type = 'BASE TABLE'
+
+2023/03/05 15:58:41 /Users/stack/Project/go_lang/rat/bootstrap/db.go:63
+[32.336ms] [rows:0] CREATE TABLE `media` (`id` bigint unsigned AUTO_INCREMENT,`disk_type` varchar(20) NOT NULL COMMENT '存储类型',`src_type` tinyint NOT NULL COMMENT '链接类型 1相对路径 2外链',`src` varchar(191) NOT NULL COMMENT '资源链接',`created_at` datetime NULL,`updated_at` datetime NULL,PRIMARY KEY (`id`),INDEX `idx_media_disk_type` (`disk_type`))
+
+2023/03/05 15:58:50 /Users/stack/Project/go_lang/rat/app/services/user.go:31
+[0.664ms] [rows:1] SELECT * FROM `users` WHERE mobile = '19938064067' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/03/05 15:59:04 /Users/stack/Project/go_lang/rat/app/services/user.go:41
+[0.474ms] [rows:1] SELECT * FROM `users` WHERE `users`.`id` = 1 AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/03/05 16:00:28 /Users/stack/Project/go_lang/rat/app/services/user.go:31
+[1.253ms] [rows:1] SELECT * FROM `users` WHERE mobile = '19938064067' AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/03/05 16:00:38 /Users/stack/Project/go_lang/rat/app/services/user.go:41
+[0.772ms] [rows:1] SELECT * FROM `users` WHERE `users`.`id` = 1 AND `users`.`deleted_at` IS NULL ORDER BY `users`.`id` LIMIT 1
+
+2023/03/05 16:00:38 /Users/stack/Project/go_lang/rat/app/services/media.go:69
+[1.914ms] [rows:1] INSERT INTO `media` (`disk_type`,`src_type`,`src`,`created_at`,`updated_at`) VALUES ('local',1,'local/test/813be3cc-da6f-4475-a374-e1c19995ecc8.png','2023-03-05 16:00:38.318','2023-03-05 16:00:38.318') RETURNING `id`
+
+2023/03/05 16:14:28 /Users/stack/Project/go_lang/rat/bootstrap/db.go:47
+[error] failed to initialize database, got error Error 1698 (28000): Access denied for user 'root'@'localhost'

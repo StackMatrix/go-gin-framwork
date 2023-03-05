@@ -1,0 +1,57 @@
+[2023-03-05 15:30:43.195]	local.info	rat/mian.go:14	log init success!
+[2023-03-05 15:30:43.303]	local.error	bootstrap/redis.go:19	Redis connect ping failed, err:	{"err": "dial tcp: lookup tcp/ᣫ: nodename nor servname provided, or not known"}
+[2023-03-05 15:31:47.927]	local.info	rat/mian.go:14	log init success!
+[2023-03-05 15:31:48.030]	local.error	bootstrap/redis.go:19	Redis connect ping failed, err:	{"err": "dial tcp: lookup tcp/ᣫ: nodename nor servname provided, or not known"}
+[2023-03-05 15:33:23.057]	local.info	rat/mian.go:14	log init success!
+[2023-03-05 15:33:36.025]	local.info	rat/mian.go:14	log init success!
+[2023-03-05 15:40:57.124]	local.info	rat/mian.go:14	log init success!
+[2023-03-05 15:58:41.920]	local.info	rat/mian.go:14	log init success!
+[2023-03-05 16:14:28.898]	local.info	rat/mian.go:14	log init success!
+
+
+[31m2023/03/05 16:14:38 [Recovery] 2023/03/05 - 16:14:38 panic recovered:
+POST /api/auth/login HTTP/1.1
+Host: localhost:8888
+Accept: */*
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Length: 57
+Content-Type: text/plain
+Postman-Token: b6937958-ab8f-4079-b0d5-521aa856650d
+User-Agent: PostmanRuntime/7.29.2
+
+
+runtime error: invalid memory address or nil pointer dereference
+/opt/homebrew/Cellar/go/1.19/libexec/src/runtime/panic.go:260 (0x1028b3fe7)
+	panicmem: panic(memoryError)
+/opt/homebrew/Cellar/go/1.19/libexec/src/runtime/signal_unix.go:835 (0x1028cc287)
+	sigpanic: panicmem()
+/Users/stack/go/pkg/mod/gorm.io/gorm@v1.24.6/gorm.go:374 (0x102e41498)
+	(*DB).getInstance: if db.clone > 0 {
+/Users/stack/go/pkg/mod/gorm.io/gorm@v1.24.6/chainable_api.go:201 (0x102e38fef)
+	(*DB).Where: tx = db.getInstance()
+/Users/stack/Project/go_lang/rat/app/services/user.go:31 (0x102f9bdef)
+	(*userService).Login: err = global.App.DB.Where("mobile = ?", params.Mobile).First(&user).Error
+/Users/stack/Project/go_lang/rat/app/controllers/app/auth.go:19 (0x102f9ce57)
+	Login: if err, user := services.UserService.Login(form); err != nil {
+/Users/stack/go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174 (0x102f88adb)
+	(*Context).Next: c.handlers[c.index](c)
+/Users/stack/go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/recovery.go:102 (0x102f88abc)
+	CustomRecoveryWithWriter.func1: c.Next()
+/Users/stack/go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174 (0x102f87d5b)
+	(*Context).Next: c.handlers[c.index](c)
+/Users/stack/go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/logger.go:240 (0x102f87d38)
+	LoggerWithConfig.func1: c.Next()
+/Users/stack/go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/context.go:174 (0x102f86e93)
+	(*Context).Next: c.handlers[c.index](c)
+/Users/stack/go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:620 (0x102f86b78)
+	(*Engine).handleHTTPRequest: c.Next()
+/Users/stack/go/pkg/mod/github.com/gin-gonic/gin@v1.9.0/gin.go:576 (0x102f86793)
+	(*Engine).ServeHTTP: engine.handleHTTPRequest(c)
+/opt/homebrew/Cellar/go/1.19/libexec/src/net/http/server.go:2947 (0x102affd33)
+	serverHandler.ServeHTTP: handler.ServeHTTP(rw, req)
+/opt/homebrew/Cellar/go/1.19/libexec/src/net/http/server.go:1991 (0x102afb7bf)
+	(*conn).serve: serverHandler{c.server}.ServeHTTP(w, w.req)
+/opt/homebrew/Cellar/go/1.19/libexec/src/runtime/asm_arm64.s:1165 (0x1028e6913)
+	goexit: MOVD	R0, R0	// NOP
+[0m
