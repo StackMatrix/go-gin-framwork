@@ -8,7 +8,7 @@ import (
 	"rat_server/utils"
 	"strconv"
 
-	"rat_server/app/pkg/response/auth"
+	"rat_server/app/pkg/response"
 
 	"github.com/gin-gonic/gin"
 )
@@ -48,7 +48,7 @@ func (userService *userService) Login(c *gin.Context, params request.Login) (dat
 	}
 
 	// 返回的数据
-	data = auth.LoginResponseData{
+	data = response.Login{
 		Jwt: tokenData.AccessToken,
 	}
 
