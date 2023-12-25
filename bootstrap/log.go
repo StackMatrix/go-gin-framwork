@@ -2,8 +2,8 @@ package bootstrap
 
 import (
 	"os"
-	"rat/global"
-	"rat/utils"
+	"rat_server/global"
+	"rat_server/utils"
 	"time"
 
 	"go.uber.org/zap"

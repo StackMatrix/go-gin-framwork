@@ -1,8 +1,8 @@
 package main
 
 import (
-	"rat/bootstrap"
-	"rat/global"
+	"rat_server/bootstrap"
+	"rat_server/global"
 )
 
 func main() {
@@ -11,7 +11,7 @@ func main() {
 
 	// 初始化日志
 	global.App.Log = bootstrap.InitializeLog()
-	global.App.Log.Info("log init success!")
+	global.App.Log.Info("[Log] Log init success!")
 
 	// 初始化数据库
 	global.App.DB = bootstrap.InitializeDB()

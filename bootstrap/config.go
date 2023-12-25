@@ -3,7 +3,7 @@ package bootstrap
 import (
 	"fmt"
 	"os"
-	"rat/global"
+	"rat_server/global"
 
 	"github.com/fsnotify/fsnotify"
 	"github.com/spf13/viper"

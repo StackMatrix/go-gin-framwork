@@ -12,7 +12,7 @@ type CustomErrors struct {
 }
 
 var Errors = CustomErrors{
-	BusinessError: CustomError{40000, "业务错误"},
-	ValidateError: CustomError{42200, "请求参数错误"},
-	TokenError:    CustomError{40100, "登录授权失效"},
+	BusinessError: CustomError{400, "业务错误"},
+	ValidateError: CustomError{401, "请求参数错误"},
+	TokenError:    CustomError{402, "登录授权失效"},
 }

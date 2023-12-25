@@ -2,13 +2,14 @@ package bootstrap
 
 import (
 	"context"
+	"errors"
 	"log"
 	"net/http"
 	"os"
 	"os/signal"
-	"rat/app/middleware"
-	"rat/global"
-	"rat/routes"
+	"rat_server/app/middleware"
+	"rat_server/global"
+	"rat_server/routes"
 	"syscall"
 	"time"
 
@@ -31,7 +32,6 @@ func setupRouter() *gin.Engine {
 	// 前端项目静态资源
 	router.StaticFile("/", "./static/dist/index.html")
 	router.Static("/assets", "./static/dist/assets")
-	router.StaticFile("/favicon.ico", "./static/dist/favicon.ico")
 	// 其他静态资源
 	router.Static("/public", "./static")
 	router.Static("/storage", "./storage/app/public")
@@ -52,7 +52,7 @@ func RunServer() {
 	}
 
 	go func() {
-		if err := srv.ListenAndServe(); err != nil && err != http.ErrServerClosed {
+		if err := srv.ListenAndServe(); err != nil && !errors.Is(err, http.ErrServerClosed) {
 			log.Fatalf("listen: %s\n", err)
 		}
 	}()

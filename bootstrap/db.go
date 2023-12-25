@@ -4,11 +4,11 @@ import (
 	"io"
 	"log"
 	"os"
-	"rat/global"
+	"rat_server/global"
 	"strconv"
 	"time"
 
-	"rat/app/models"
+	"rat_server/app/models"
 
 	"go.uber.org/zap"
 	"gopkg.in/natefinch/lumberjack.v2"
@@ -48,6 +48,7 @@ func initMySqlGorm() *gorm.DB {
 		DisableForeignKeyConstraintWhenMigrating: true,            // 禁用自动创建外键约束
 		Logger:                                   getGormLogger(), // 使用自定义 Logger
 	}); err != nil {
+		global.App.Log.Error("[Services] MySQL connect ping failed, err:", zap.Any("err", err))
 		return nil
 	} else {
 		sqlDB, _ := db.DB()
@@ -62,6 +63,7 @@ func initMySqlGorm() *gorm.DB {
 func initMySqlTables(db *gorm.DB) {
 	err := db.AutoMigrate(
 		models.User{},
+		models.Log{},
 		models.Media{},
 	)
 	if err != nil {

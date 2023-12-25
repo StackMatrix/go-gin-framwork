@@ -1,9 +1,9 @@
 package middleware
 
 import (
-	"rat/app/common/response"
-	"rat/app/services"
-	"rat/global"
+	"rat_server/app/common/response"
+	"rat_server/app/services"
+	"rat_server/global"
 	"strconv"
 	"time"
 

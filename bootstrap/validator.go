@@ -1,7 +1,7 @@
 package bootstrap
 
 import (
-	"rat/utils"
+	"rat_server/utils"
 	"reflect"
 	"strings"
 

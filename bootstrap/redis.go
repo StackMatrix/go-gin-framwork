@@ -2,7 +2,7 @@ package bootstrap
 
 import (
 	"context"
-	"rat/global"
+	"rat_server/global"
 
 	"github.com/go-redis/redis/v8"
 	"go.uber.org/zap"
@@ -16,7 +16,7 @@ func InitializeRedis() *redis.Client {
 	})
 	_, err := client.Ping(context.Background()).Result()
 	if err != nil {
-		global.App.Log.Error("Redis connect ping failed, err:", zap.Any("err", err))
+		global.App.Log.Error("[Services] Redis connect ping failed, err:", zap.Any("err", err))
 		return nil
 	}
 	return client

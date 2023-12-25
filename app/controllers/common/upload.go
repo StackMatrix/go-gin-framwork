@@ -1,9 +1,9 @@
 package common
 
 import (
-	"rat/app/common/request"
-	"rat/app/common/response"
-	"rat/app/services"
+	"rat_server/app/common/request"
+	"rat_server/app/common/response"
+	"rat_server/app/services"
 
 	"github.com/gin-gonic/gin"
 )
@@ -20,5 +20,5 @@ func ImageUpload(c *gin.Context) {
 		response.BusinessFail(c, err.Error())
 		return
 	}
-	response.Success(c, outPut)
+	response.Success(c, outPut, "上传成功")
 }

@@ -4,9 +4,9 @@ import (
 	"context"
 	"errors"
 	"path"
-	"rat/app/common/request"
-	"rat/app/models"
-	"rat/global"
+	"rat_server/app/common/request"
+	"rat_server/app/models"
+	"rat_server/global"
 	"strconv"
 	"time"
 

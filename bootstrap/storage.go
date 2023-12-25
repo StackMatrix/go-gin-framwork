@@ -1,7 +1,7 @@
 package bootstrap
 
 import (
-	"rat/global"
+	"rat_server/global"
 
 	"github.com/jassue/go-storage/kodo"
 	"github.com/jassue/go-storage/local"

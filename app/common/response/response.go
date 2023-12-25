@@ -3,31 +3,31 @@ package response
 import (
 	"net/http"
 	"os"
-	"rat/global"
+	"rat_server/global"
 
 	"github.com/gin-gonic/gin"
 )
 
-// 响应结构体
+// Response 响应结构体
 type Response struct {
-	ErrorCode int         `json:"error_code"` // 自定义错误码
-	Data      interface{} `json:"data"`       // 数据
-	Message   string      `json:"message"`    // 信息
+	ErrorCode int         `json:"status"` // 自定义错误码
+	Data      interface{} `json:"data"`   // 数据
+	Message   string      `json:"msg"`    // 信息
 }
 
-// Success 响应成功 ErrorCode 为 0 表示成功
-func Success(c *gin.Context, data interface{}) {
+// Success 响应成功 status 为 200 表示成功
+func Success(c *gin.Context, data interface{}, msg string) {
 	c.JSON(http.StatusOK, Response{
-		0,
+		200,
 		data,
-		"ok",
+		msg,
 	})
 }
 
-// Fail 响应失败 ErrorCode 不为 0 表示失败
-func Fail(c *gin.Context, errorCode int, msg string) {
+// Fail 响应失败 status 不为 1 表示失败
+func Fail(c *gin.Context, status int, msg string) {
 	c.JSON(http.StatusOK, Response{
-		errorCode,
+		status,
 		nil,
 		msg,
 	})
@@ -53,7 +53,7 @@ func TokenFail(c *gin.Context) {
 	FailByError(c, global.Errors.TokenError)
 }
 
-// Recovery 中间件
+// ServerError 中间件
 func ServerError(c *gin.Context, err interface{}) {
 	msg := "Internal Server Error"
 	// 非生产环境显示具体错误信息

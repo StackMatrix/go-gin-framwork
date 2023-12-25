@@ -1,7 +1,7 @@
 package global
 
 import (
-	"rat/config"
+	"rat_server/config"
 
 	"github.com/go-redis/redis/v8"
 	"github.com/jassue/go-storage/storage"

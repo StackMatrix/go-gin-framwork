@@ -1,8 +1,8 @@
 package middleware
 
 import (
-	"rat/app/common/response"
-	"rat/global"
+	"rat_server/app/common/response"
+	"rat_server/global"
 
 	"github.com/gin-gonic/gin"
 	"gopkg.in/natefinch/lumberjack.v2"

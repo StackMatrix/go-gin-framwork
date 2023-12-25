@@ -2,7 +2,7 @@ package global
 
 import (
 	"context"
-	"rat/utils"
+	"rat_server/utils"
 	"time"
 
 	"github.com/go-redis/redis/v8"
