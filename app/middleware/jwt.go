@@ -1,7 +1,7 @@
 package middleware
 
 import (
-	"rat_server/app/common/response"
+	"rat_server/app/pkg/response"
 	"rat_server/app/services"
 	"rat_server/global"
 	"strconv"

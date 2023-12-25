@@ -2,8 +2,8 @@ package app
 
 import (
 	"github.com/dgrijalva/jwt-go"
-	"rat_server/app/common/request"
-	"rat_server/app/common/response"
+	"rat_server/app/pkg/request"
+	"rat_server/app/pkg/response"
 	"rat_server/app/services"
 
 	"github.com/gin-gonic/gin"
@@ -11,7 +11,7 @@ import (
 
 // Register 用户注册
 func Register(c *gin.Context) {
-	var form request.RegisterModel
+	var form request.Register
 	if err := c.ShouldBindJSON(&form); err != nil {
 		response.ValidateFail(c, request.GetErrorMsg(form, err))
 		return
@@ -27,7 +27,7 @@ func Register(c *gin.Context) {
 
 // Login 用户登录
 func Login(c *gin.Context) {
-	var form request.LoginModel
+	var form request.Login
 	if err := c.ShouldBindJSON(&form); err != nil {
 		response.ValidateFail(c, request.GetErrorMsg(form, err))
 		return

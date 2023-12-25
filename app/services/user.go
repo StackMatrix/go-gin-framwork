@@ -2,13 +2,13 @@ package services
 
 import (
 	"errors"
-	"rat_server/app/common/request"
 	"rat_server/app/models"
+	"rat_server/app/pkg/request"
 	"rat_server/global"
 	"rat_server/utils"
 	"strconv"
 
-	"rat_server/app/common/response/auth"
+	"rat_server/app/pkg/response/auth"
 
 	"github.com/gin-gonic/gin"
 )

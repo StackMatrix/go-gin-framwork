@@ -10,9 +10,9 @@ import (
 
 // Response 响应结构体
 type Response struct {
-	ErrorCode int         `json:"status"` // 自定义错误码
-	Data      interface{} `json:"data"`   // 数据
-	Message   string      `json:"msg"`    // 信息
+	Status  int         `json:"status"` // 自定义错误码
+	Data    interface{} `json:"data"`   // 数据
+	Message string      `json:"msg"`    // 信息
 }
 
 // Success 响应成功 status 为 200 表示成功

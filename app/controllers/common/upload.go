@@ -1,8 +1,8 @@
 package common
 
 import (
-	"rat_server/app/common/request"
-	"rat_server/app/common/response"
+	"rat_server/app/pkg/request"
+	"rat_server/app/pkg/response"
 	"rat_server/app/services"
 
 	"github.com/gin-gonic/gin"

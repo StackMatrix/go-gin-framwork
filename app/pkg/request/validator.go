@@ -1,6 +1,7 @@
 package request
 
 import (
+	"errors"
 	"github.com/go-playground/validator/v10"
 )
 
@@ -12,7 +13,8 @@ type ValidatorMessages map[string]string
 
 // GetErrorMsg 获取错误信息
 func GetErrorMsg(request interface{}, err error) string {
-	if _, isValidatorErrors := err.(validator.ValidationErrors); isValidatorErrors {
+	var validationErrors validator.ValidationErrors
+	if errors.As(err, &validationErrors) {
 		_, isValidator := request.(Validator)
 
 		for _, v := range err.(validator.ValidationErrors) {
